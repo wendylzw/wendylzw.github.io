@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ✏️ 网站标题与描述（浏览器标签页、搜索结果里显示） -->
+  <title>Wendy (Zhiwei) Liang</title>
+  <meta name="description" content="Wendy (Zhiwei) Liang is a first-year Ph.D. student in Operations Management at Emory University, advised by Professor Ruomeng Cui.">
+  <meta name="author" content="Wendy (Zhiwei) Liang">
+  <link rel="canonical" href="https://wendylzw.github.io/">
+
+  <!-- 分享链接时的预览卡片（换成真实照片后可加 og:image） -->
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Wendy (Zhiwei) Liang">
+  <meta property="og:description" content="Ph.D. Student in Operations Management at Emory University">
+  <meta property="og:url" content="https://wendylzw.github.io/">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+  <script>
+    /* Dark mode: use the visitor's saved choice, otherwise follow the system setting.
+       Runs before the page paints, so there is no light/dark flash. */
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem('theme'); } catch (e) {}
+      if (t !== 'light' && t !== 'dark') {
+        t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+
+  <!-- Icons: Font Awesome (email, GitHub, LinkedIn...) + Academicons (Google Scholar, ORCID...) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.4/css/academicons.min.css"
+        integrity="sha512-IW0nhlW5MgNydsXJO40En2EoCkTTjZhI3yuODrZIc8cQ4h1XcF53PsqDHa09NqnkXuIe0Oiyyj171BqZFwISBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Structured data: helps search engines show your name, title and profiles -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Wendy Liang",
+    "alternateName": "Zhiwei Liang",
+    "url": "https://wendylzw.github.io/",
+    "jobTitle": "Ph.D. Student in Operations Management",
+    "affiliation": { "@type": "CollegeOrUniversity", "name": "Emory University" },
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "Boston University" },
+      { "@type": "CollegeOrUniversity", "name": "Wuhan University" }
+    ],
+    "sameAs": [
+      "https://scholar.google.com/citations?user=FYK_5mUAAAAJ",
+      "https://www.linkedin.com/in/zhiweilll/",
+      "https://github.com/wendylzw"
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ==================== 顶部导航栏 ==================== -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Main">
+      <a class="nav__brand" href="#top">Wendy (Zhiwei) Liang</a>
+
+      <!-- ✏️ 导航链接：和下面各个 <section id="..."> 对应 -->
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#research">Research</a></li>
+        <li><a href="#teaching">Teaching</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <!-- ✏️ 有 CV 后：把 PDF 放到 files/CV.pdf，再删掉下面这行两头的注释符号
+        <li><a href="files/CV.pdf" target="_blank" rel="noopener">CV</a></li>
+        -->
+      </ul>
+
+      <button class="icon-btn theme-toggle" type="button"
+              aria-label="Switch between light and dark mode" title="Switch between light and dark mode">
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="currentColor" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="4.5" fill="currentColor" stroke="none"/>
+          <path d="M12 1.5V4M12 20v2.5M1.5 12H4M20 12h2.5M4.6 4.6l1.8 1.8M17.6 17.6l1.8 1.8M4.6 19.4l1.8-1.8M17.6 6.4l1.8-1.8"/>
+        </svg>
+      </button>
+
+      <button class="icon-btn nav__toggle" type="button"
+              aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <svg class="icon-menu" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M3 6h18M3 12h18M3 18h18"/>
+        </svg>
+        <svg class="icon-close" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M6 6l12 12M18 6L6 18"/>
+        </svg>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+
+    <!-- ==================== 首屏：头像 + 简介 + 教育经历 ==================== -->
+    <section class="band band--hero" id="top">
+      <div class="band__inner">
+
+        <aside class="profile" aria-label="Profile">
+          <!-- ✏️ 头像：把照片放进 images/ 文件夹（如 images/profile.jpg），再改下面的 src -->
+          <img class="profile__avatar" src="images/avatar-placeholder.svg" alt="Wendy (Zhiwei) Liang" width="175" height="175">
+          <p class="profile__name">Wendy (Zhiwei) Liang</p>
+          <p class="profile__bio">Ph.D. Student at Emory University</p>
+
+          <!-- ✏️ 个人链接：不需要的整行删掉即可 -->
+          <ul class="profile__links">
+            <!-- 有邮箱后取消注释：
+            <li><a href="mailto:your.email@emory.edu"><i class="fas fa-envelope" aria-hidden="true"></i>Email</a></li>
+            -->
+            <li><a href="https://scholar.google.com/citations?user=FYK_5mUAAAAJ&amp;hl=en"><i class="ai ai-google-scholar" aria-hidden="true"></i>Google Scholar</a></li>
+            <li><a href="https://www.linkedin.com/in/zhiweilll/"><i class="fab fa-linkedin" aria-hidden="true"></i>LinkedIn</a></li>
+            <li><a href="https://github.com/wendylzw"><i class="fab fa-github" aria-hidden="true"></i>GitHub</a></li>
+          </ul>
+
+          <!-- 可选：学校 logo（浅色、深色模式各一张）
+          <div class="profile__logo">
+            <img class="logo-light" src="images/emory-logo.svg" alt="Emory University">
+            <img class="logo-dark" src="images/emory-logo-white.svg" alt="Emory University">
+          </div>
+          -->
+        </aside>
+
+        <div class="hero">
+          <h1 class="hero__welcome">Welcome! This is Wendy (Zhiwei) Liang.</h1>
+          <p>I am a first-year Ph.D. student in Operations Management at Emory University.
+            I am fortunate to be advised by Professor <a href="http://ruomengcui.com/">Ruomeng Cui</a>.</p>
+          <!-- ✏️ 可以在上面这段里加 1–2 句研究兴趣 -->
+
+          <!-- ✏️ 重要消息（求职、近期报告等），需要时取消注释：
+          <p class="hero__note">I will present at ...</p>
+          -->
+
+          <h2 id="education">Education</h2>
+          <ul>
+            <li>Ph.D. in Operations Management, Emory University, 2026 – Present</li>
+            <li>M.S. in Statistical Practice, Boston University, 2020 – 2022</li>
+            <li>B.S. in Statistics, Wuhan University, 2016 – 2020</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 研究 / 论文 ==================== -->
+    <section class="band" id="research">
+      <div class="band__inner">
+        <h2 class="band__title">Research</h2>
+        <div class="band__body">
+          <p class="empty">Coming soon.</p>
+          <!-- ✏️ 有论文后，删掉上面的 Coming soon，按这个格式添加：
+          <h3>Working Papers</h3>
+          <ul>
+            <li><a href="论文链接" target="_blank">Paper Title (2027)</a>, with Ruomeng Cui. <i>Working paper</i></li>
+          </ul>
+          -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 教学 ==================== -->
+    <section class="band" id="teaching">
+      <div class="band__inner">
+        <h2 class="band__title">Teaching</h2>
+        <div class="band__body">
+          <ul>
+            <li>Process and Systems Management ISOM 351 (Undergraduate Core, 130+ students); TA; Fall 2026</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 经历（实习 / 业界合作） ==================== -->
+    <section class="band" id="experience">
+      <div class="band__inner">
+        <h2 class="band__title">Experience</h2>
+        <div class="band__body">
+          <p class="empty">Coming soon.</p>
+          <!-- ✏️ 格式示例：
+          <ul>
+            <li>Data Scientist Intern, <i>Company Name</i>, Summer 2021</li>
+          </ul>
+          -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 联系方式 ==================== -->
+    <section class="band" id="contact">
+      <div class="band__inner">
+        <h2 class="band__title">Contact</h2>
+        <div class="band__body">
+          <p class="empty">Coming soon.</p>
+          <!-- ✏️ 格式示例：
+          <ul>
+            <li>Email: <a href="mailto:your.email@emory.edu">your.email@emory.edu</a></li>
+            <li>Address: Goizueta Business School, Emory University, Atlanta, GA</li>
+          </ul>
+          -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year">2026</span> Wendy (Zhiwei) Liang</p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
