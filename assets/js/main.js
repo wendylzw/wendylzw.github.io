@@ -1,5 +1,5 @@
 /* Academic homepage — small interactions:
-   dark-mode toggle, mobile menu, footer year. */
+   dark-mode toggle, mobile menu, scroll reveal of headings, photo lightbox, footer year. */
 (function () {
   var root = document.documentElement;
 
@@ -49,6 +49,34 @@
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape') setOpen(false);
     });
+  }
+
+  /* ---- Headings fade and slide in as they scroll into view ---- */
+  var headings = document.querySelectorAll('.content h1, .content h2, .content h3');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.1 });
+    headings.forEach(function (h) { h.classList.add('reveal'); io.observe(h); });
+  }
+
+  /* ---- Click the photo to see it large ---- */
+  var photoBtn = document.querySelector('.profile__photo');
+  var lightbox = document.getElementById('photo-lightbox');
+  if (photoBtn && lightbox && typeof lightbox.showModal === 'function') {
+    var big = lightbox.querySelector('img');
+    photoBtn.addEventListener('click', function () {
+      var img = photoBtn.querySelector('img');
+      big.src = img.currentSrc || img.src;
+      lightbox.showModal();
+    });
+    // Close on any click (photo, backdrop or the × button)
+    lightbox.addEventListener('click', function () { lightbox.close(); });
   }
 
   /* ---- Footer year ---- */

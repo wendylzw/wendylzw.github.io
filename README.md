@@ -9,7 +9,7 @@
 | --- | --- |
 | `index.html` | 全部页面内容：简介、教育、研究、教学、经历、联系方式 |
 | `assets/css/style.css` | 样式与配色（顶部变量是浅色，`html[data-theme="dark"]` 是深色） |
-| `assets/js/main.js` | 深色模式切换、手机端菜单 |
+| `assets/js/main.js` | 深色模式切换、手机端菜单、标题滚动淡入、点击头像看大图 |
 | `images/` | 头像、网站图标、学校 logo |
 | `files/` | CV 等 PDF 文件 |
 | `.nojekyll` | 告诉 GitHub Pages 直接发布文件，不用 Jekyll 处理 |
