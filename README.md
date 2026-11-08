@@ -23,6 +23,7 @@
 - **更新 CV**：用新文件覆盖 `files/CV.pdf`（文件名保持不变，导航栏的链接就不用改）。
 - **增删板块**：每个板块是一个 `<section class="band" id="…">`；同时增删顶部导航里对应的 `<li>`。
 - **改配色**：编辑 `assets/css/style.css` 顶部的颜色变量。
+- **改了 CSS/JS 之后**：把 `index.html` 里 `style.css?v=2`、`main.js?v=2` 的数字加 1。GitHub Pages 会让浏览器缓存这些文件 10 分钟，不改版本号的话，访客可能看到新内容配旧样式。
 
 ## 本地预览
 
