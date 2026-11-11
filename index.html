@@ -10,11 +10,12 @@
   <meta name="author" content="Wendy Liang">
   <link rel="canonical" href="https://wendylzw.github.io/">
 
-  <!-- 分享链接时的预览卡片（换成真实照片后可加 og:image） -->
+  <!-- 分享链接时的预览卡片 -->
   <meta property="og:type" content="profile">
   <meta property="og:title" content="Wendy (Zhiwei) Liang">
   <meta property="og:description" content="Ph.D. Student in Operations Management at Goizueta Business School, Emory University">
   <meta property="og:url" content="https://wendylzw.github.io/">
+  <meta property="og:image" content="https://wendylzw.github.io/images/profile.jpg">
   <meta name="twitter:card" content="summary">
 
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
@@ -47,7 +48,7 @@
         integrity="sha512-IW0nhlW5MgNydsXJO40En2EoCkTTjZhI3yuODrZIc8cQ4h1XcF53PsqDHa09NqnkXuIe0Oiyyj171BqZFwISBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
   <!-- ✏️ 改了 style.css 或 main.js 后，把 ?v= 后面的数字改大一点，访客就不会看到旧样式 -->
-  <link rel="stylesheet" href="assets/css/style.css?v=2">
+  <link rel="stylesheet" href="assets/css/style.css?v=3">
 
   <!-- Structured data: helps search engines show your name, title and profiles -->
   <script type="application/ld+json">
@@ -122,7 +123,7 @@
       <!-- ✏️ 头像：把照片放进 images/ 文件夹（如 images/profile.jpg），再改下面 <img> 的 src。
            竖版人像效果最好；点击头像会弹出大图。 -->
       <button class="profile__photo" type="button" aria-label="View larger photo">
-        <img class="profile__avatar" src="images/avatar-placeholder.svg" alt="Wendy (Zhiwei) Liang" width="240" height="300">
+        <img class="profile__avatar" src="images/profile.jpg" alt="Wendy (Zhiwei) Liang" width="240" height="300">
       </button>
       <div class="profile__text">
         <p class="profile__name">Wendy (Zhiwei) Liang</p>
@@ -131,13 +132,17 @@
 
       <!-- ✏️ 个人链接：不需要的整行删掉即可 -->
       <ul class="profile__links">
-        <!-- 有邮箱后取消注释：
-        <li><a href="mailto:your.email@emory.edu"><i class="fas fa-envelope" aria-hidden="true"></i>Email</a></li>
-        -->
+        <li><a href="mailto:zhiwei.liang@emory.edu"><i class="fas fa-envelope" aria-hidden="true"></i>Email</a></li>
         <li><a href="https://scholar.google.com/citations?user=FYK_5mUAAAAJ&amp;hl=en"><i class="ai ai-google-scholar" aria-hidden="true"></i>Google Scholar</a></li>
         <li><a href="https://www.linkedin.com/in/zhiweilll/"><i class="fab fa-linkedin" aria-hidden="true"></i>LinkedIn</a></li>
         <li><a href="https://github.com/wendylzw"><i class="fab fa-github" aria-hidden="true"></i>GitHub</a></li>
       </ul>
+
+      <!-- ✏️ 学校 logo：浅色模式显示深蓝版，深色模式显示白色版 -->
+      <div class="profile__logo">
+        <img class="profile__logo--light" src="images/emory-logo.svg" alt="Emory University" width="175" height="45">
+        <img class="profile__logo--dark" src="images/emory-logo-white.svg" alt="Emory University" width="175" height="45">
+      </div>
     </aside>
 
     <!-- ==================== 右侧：各个板块 ==================== -->
@@ -207,26 +212,21 @@
       <!-- 经历（实习 / 业界合作） -->
       <section id="experience">
         <h2>Experience</h2>
-        <p class="empty">Coming soon.</p>
-        <!-- ✏️ 格式示例：
+        <!-- ✏️ 每段经历一个 <li>：公司名 (时间)，下面一行是职位 -->
         <ul class="entries">
-          <li><strong>Company Name</strong> (Summer 2021)
-            <ul><li>Data Scientist Intern</li></ul>
+          <li><strong>ByteDance</strong> (2021)
+            <ul><li>Business Analyst Intern</li></ul>
           </li>
         </ul>
-        -->
       </section>
 
       <!-- 联系方式 -->
       <section id="contact">
         <h2>Contact</h2>
-        <p class="empty">Coming soon.</p>
-        <!-- ✏️ 格式示例：
         <ul class="entries">
-          <li>Email: <a href="mailto:your.email@emory.edu">your.email@emory.edu</a></li>
-          <li>Address: Goizueta Business School, Emory University, Atlanta, GA</li>
+          <li>Email: <a href="mailto:zhiwei.liang@emory.edu">zhiwei.liang@emory.edu</a></li>
+          <li>Address: 1300 Clifton Rd, W418, Atlanta, GA 30329</li>
         </ul>
-        -->
       </section>
 
     </div>
