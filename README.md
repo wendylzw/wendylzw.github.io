@@ -1,7 +1,7 @@
 # wendylzw.github.io
 
 个人学术主页。纯静态 HTML/CSS，无需任何构建工具，由 GitHub Pages 直接托管：
-<https://wendylzw.github.io>
+<https://liangwendy.org>
 
 ## 文件结构
 
@@ -13,6 +13,7 @@
 | `images/` | 头像、网站图标、学校 logo |
 | `files/` | CV 等 PDF 文件 |
 | `.nojekyll` | 告诉 GitHub Pages 直接发布文件，不用 Jekyll 处理 |
+| `CNAME` | 自定义域名 liangwendy.org（DNS 在 Cloudflare 管理，别删这个文件） |
 
 ## 常见修改
 
@@ -39,4 +40,4 @@ python3 -m http.server 8000
 git add -A && git commit -m "Update website" && git push
 ```
 
-推送后约 1 分钟，<https://wendylzw.github.io> 会自动更新。
+推送后约 1 分钟，<https://liangwendy.org> 会自动更新。
