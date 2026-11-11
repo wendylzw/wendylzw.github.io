@@ -305,6 +305,13 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
 .profile__links a:hover { color: var(--primary); }
 .profile__links a:hover i { transform: translateX(2px); }
 
+/* 学校 logo：浅色模式用深蓝版，深色模式用白色版 */
+.profile__logo { max-width: 175px; margin: 1.6rem auto 0; }
+.profile__logo img { display: block; width: 100%; height: auto; }
+.profile__logo--dark { display: none; }
+html[data-theme="dark"] .profile__logo--light { display: none; }
+html[data-theme="dark"] .profile__logo--dark { display: block; }
+
 @media (min-width: 57.5em) {
   .profile {
     position: sticky;
@@ -314,6 +321,7 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
   }
   .profile__photo { margin: 0; }
   .profile__avatar { width: 240px; }
+  .profile__logo { margin-left: 0; }
 }
 
 /* ---------- Content sections ---------- */
